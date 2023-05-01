@@ -16,8 +16,8 @@ def reply_msg(session, event, text):
 
 def main():
     vk_session = vk_api.VkApi(
-        token='vk1.a.fVda2xRs1I8GZZ7sNo8cpH2NADunCf5qPcDaKuJz6AKAWjsfXj6MIlxa74FI8XyH1av7T6aZUy9XOTAMY_XfK-Gx5YkVa9JOuAWp8DjbCTnZfkCGfJ8P--Yz2O2Flsld6NdxQm7JMA2XymPLqoj8hWF1ZYeX1BZE3ziqXR3RyzL9z_MT8wYApvjP3C91tC8R55tfoUykTsapIlc6_FRZeA')
-    longpoll = VkBotLongPoll(vk_session, 220256793)
+        token=TOKEN)
+    longpoll = VkBotLongPoll(vk_session, GROUP_ID)
     base_reply = 'Я могу сказать, какой день недели был в ту или иную дату!\nПросто назови мне дату ' \
                  'в формате ГГГГ-ММ-ДД в своем сообщении, а я скажу тебе день ' \
                  'недели.\nP.S.: На данный момент считывается только первая подходящая по формату дата в сообщении'
