@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if found %}
+{% for i in range(3) %}
+<h2 align="center">{{list_of_headers[i]}}</h2>
+<table class="table">
+    <tbody>
+    {% for item in listed[i] %}
+    <tr>
+        <td class="table-primary">{{ item }}</td>
+        <td class="table-primary">{{ listed[i][item] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
+<h3 align="center"> Cities </h3>
+<table class="table" align="center">
+    <tbody>
+    {% for item in cities %}
+    <tr>
+        <td class="table-primary">{{ item }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<h1 align="center">Couldn't find any public listings for a group with this ID.</h1>
+{% endif %}
+{% endblock %}
